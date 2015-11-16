@@ -1,0 +1,25 @@
+{
+  "name": "jenkins-build-status",
+  "version": "0.1.0",
+  "description": "",
+  "main": "proxy.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "0.22.0",
+    "exports-loader": "0.6.2",
+    "html-webpack-plugin": "1.6.2",
+    "material-design-lite": "^1.0.6",
+    "style-loader": "0.13.0",
+    "ulmus-loader": "0.2.0",
+    "webpack": "1.12.4",
+    "webpack-dev-server": "1.12.1"
+  },
+  "scripts": {
+    "proxy": "node proxy.js",
+    "reactor": "elm-reactor",
+    "serve": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felix Stürmer",
+  "license": "MIT"
+}
