@@ -44,22 +44,28 @@ update action model =
             )
     )
 
+mdlCell content =
+    Html.div
+        [ Attr.class "mdl-cell mdl-cell--12-col"
+        ]
+        [ content ]
+
 view : Address Action -> Model -> Html.Html
 view address model = Html.div
     []
     [ Html.div
-        [ Attr.class "mdl-grid page-container"
+        [ Attr.class "mdl-grid jjm-page-container"
         ]
-        (List.map (viewJobStub address) model.availableJobs)
+        (List.map (mdlCell << viewJobStub address) model.availableJobs)
     ]
 
 viewJobStub : Address Action -> Jenkins.JobStub -> Html.Html
 viewJobStub address jobStub =
-        Html.div
-            [ Attr.class "mdl-cell mdl-cell--12-col"
-            ]
-            [ Html.text jobStub.name
-            ]
+    Html.div
+        [ Attr.class "mdl-shadow--2dp jjm-card"
+        ]
+        [ Html.text jobStub.name
+        ]
 
 app =
     StartApp.start
