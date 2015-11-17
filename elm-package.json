@@ -1,7 +1,7 @@
 {
     "version": "0.1.0",
     "summary": "",
-    "repository": "https://github.com/weltenwort/jenkins-build-status-elm",
+    "repository": "https://github.com/weltenwort/jenkins-build-status-elm.git",
     "license": "MIT",
     "source-directories": [
         "."
